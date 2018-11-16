@@ -9,12 +9,14 @@ var score = 0;
 
 var startScreen = new StartScreen();
 var mainScreen = new MainScreen();
+var instructions = new Instructions();
 
 var playButton = new Button('Play', screenWidth/2 - 100, screenHeight/2.8);
 
-var basket = new Basket();
+var basket;
+var lemon = new Fruit();
 
-var displayedScreen = 'main';
+var displayedScreen = 'start';
 
 function setup() {
     createCanvas(screenWidth, screenHeight);
