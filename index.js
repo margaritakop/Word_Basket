@@ -1,5 +1,5 @@
 // var Fruit = require('./models/Fruit');
-// var Word = require('./models/Word');
+var Word = require('./models/Word');
 
 
 const https = require('https')
@@ -20,9 +20,9 @@ https.get('https://spreadsheets.google.com/feeds/list/1o9w4hMb1L05AyZjHSrQPZpdDQ
         word = spreadsheet.feed.entry[i].title.$t
         correctDef = spreadsheet.feed.entry[i].gsx$correctdefinition.$t
         incorrectDef = spreadsheet.feed.entry[i].gsx$incorrectdefinition.$t
-        console.log(word, correctDef, incorrectDef)
-        //words.push(new Word(word, correctDef, incorrectDef))
+        words.push(new Word(word, correctDef, incorrectDef))
     }
+    console.log(words)
 
   });
 

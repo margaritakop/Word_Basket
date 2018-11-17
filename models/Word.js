@@ -6,4 +6,4 @@ class Word {
     }
 }
 
-// module.exports = Word
+module.exports = Word
