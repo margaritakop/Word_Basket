@@ -14,10 +14,15 @@ https.get('https://spreadsheets.google.com/feeds/list/1o9w4hMb1L05AyZjHSrQPZpdDQ
   // The whole response has been received. Print out the result.
   resp.on('end', () => {
     spreadsheet = (JSON.parse(data))
-    //number is the number of word
-    console.log(spreadsheet.feed.entry[2].title.$t)
-    console.log(spreadsheet.feed.entry[2].gsx$correctdefinition.$t)
-    console.log(spreadsheet.feed.entry[2].gsx$incorrectdefinition.$t)
+
+    let words = []
+    for (let i = 0; i < spreadsheet.feed.entry.length; i++){
+        word = spreadsheet.feed.entry[i].title.$t
+        correctDef = spreadsheet.feed.entry[i].gsx$correctdefinition.$t
+        incorrectDef = spreadsheet.feed.entry[i].gsx$incorrectdefinition.$t
+        console.log(word, correctDef, incorrectDef)
+        //words.push(new Word(word, correctDef, incorrectDef))
+    }
 
   });
 
