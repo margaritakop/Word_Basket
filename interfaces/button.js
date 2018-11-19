@@ -31,9 +31,10 @@ class Button {
             mouseY > this.y &&
             mouseY < this.y + 100) {
                 fruit = new Fruit(400, 400)
-                fruit.pickword()
+                fruit.pickWord()
                 basket = new Basket();
                 displayedScreen = 'main';
+                popUp = new PopUp();
             }
     }
 

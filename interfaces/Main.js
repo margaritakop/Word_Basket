@@ -8,8 +8,18 @@ class MainScreen {
         background(bgCol);
         
         fill(btnCol);
-        for (let i = 20; i < screenWidth + 120; i += 90) {
-            ellipse(i, 40, 120);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, 60, 120);
+        }
+
+        fill(255);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, 20, 120);
+        }
+
+        fill(btnCol);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, -20, 120);
         }
 
         fill('#4E6E58');
@@ -35,7 +45,6 @@ class MainScreen {
             }
         
       
-
         var speed = 5
         fruit.y = fruit.y + speed
         fruit.showFruit()
@@ -49,23 +58,13 @@ class MainScreen {
         if(635<fruit.y){
         lives--
         }
-        //Task 1
-        
-        
-        
-        //if yes ->  show popup
-        //if not -> loose a life
-        //display in random order
-
-
-        //Task 2
-        //updating scores one point one for correct answer
-        //on pupup click correct? is text == fruit.word.correctDef
-        //lose life if not caught
-        //if wrong answer -> add the word back to the Words
 
         //Task 3
         //fruits without words?
+
+        if (keyIsDown(UP_ARROW)) {
+            showPop = true;
+        }
     }
     
     heart(x, y) {
