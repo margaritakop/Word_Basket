@@ -6,20 +6,20 @@ class Button {
     }
 
     show() {
-        stroke(150);
+        stroke(strkCol);
         strokeWeight(6);
         if (mouseX > this.x &&
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
-                fill('#FF4B3E');
+                fill(hvrCol);
             } else {
-                fill('#FFBA49');
+                fill(btnCol);
             }
         rect(this.x, this.y, 200, 100);
 
         noStroke();
-        fill(150);
+        fill('#007EA7');
         textAlign(CENTER);
         textFont('Gill Sans', 32);
         text(this.content, this.x + 100, this.y + 58);
