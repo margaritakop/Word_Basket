@@ -35,6 +35,13 @@ function loadWordsFromOnlineSpreadsheet(url){
 
 console.log(loadWordsFromOnlineSpreadsheet(url))
 
+//need words to be a global variable that updates whenever the external data is loaded
+
+//try to make this with callbacks:
+//function loadWordsfrom...(url, callback)
+//loadWords..(url, (words) => {
+//     console.log(words)
+// })
 
 //TODO call function to load words array when game is init 
 //lodaSpreadsheet(url) => ('word') => (def: '', 'incorrectDef:'')
