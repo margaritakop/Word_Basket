@@ -1,7 +1,9 @@
 //require will be used for testing, the files are called in the script tag of index.html
 
 // var Fruit = require('./models/Fruit');
-// var Word = require('./models/Word');
+// var Words = require('./models/Words')
+// var Word = require('./models/Word')
+//console.log(Words)
 
 var screenHeight = 800;
 var screenWidth = 1000;

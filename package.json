@@ -1,0 +1,22 @@
+{
+  "name": "wordbasket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/margaritakop/G_Seven_SDLC.git"
+  },
+  "author": "margaritakop, JayselDC, humulla, rizwansharif12, Taiyeb99",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/margaritakop/G_Seven_SDLC/issues"
+  },
+  "homepage": "https://github.com/margaritakop/G_Seven_SDLC#readme"
+}
