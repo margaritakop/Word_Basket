@@ -23,6 +23,8 @@ class MainScreen {
         this.heart(100, 30);
         this.heart(150, 30);
 
+        var speed = 5
+        fruit.y = fruit.y + speed
         fruit.showFruit()
 
         //Task 1
