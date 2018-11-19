@@ -23,7 +23,7 @@ var popUp = new PopUp();
 var playButton = new Button('Play', screenWidth/2 - 100, screenHeight/2.8);
 
 var basket;
-var lemon = new Fruit();
+var fruit;
 
 var displayedScreen = 'start';
 var showPop = false;

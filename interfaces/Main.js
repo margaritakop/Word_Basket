@@ -22,6 +22,20 @@ class MainScreen {
         this.heart(50, 30);
         this.heart(100, 30);
         this.heart(150, 30);
+
+        fruit.showFruit(400, 400)
+        //TODO refactor fruit x and to be attributes, like for basket
+        //TODO decrease y of fruit to fall
+
+        //TODO check if basket and fruit collided
+        //if yes -> make new popup and shop popup
+
+        //updating scores one point for catch, one for correct answer
+        //on pupup click correct? 
+        //display in random order
+        //lose life if not caught
+
+        //fruits without words?
     }
     
     heart(x, y) {
