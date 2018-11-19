@@ -43,11 +43,9 @@ class MainScreen {
             if(lives == 1){
                 this.heart(50, 30);
             }
-        
-      
-        var speed = 5
+        var fruitSpeed = 7
         if (showPop != true){
-            fruit.y = fruit.y + speed
+            fruit.y = fruit.y + fruitSpeed
             fruit.showFruit()
             }
        
@@ -56,13 +54,14 @@ class MainScreen {
             && fruit.x < basket.x + 150
             ){
             fruit.y = 0
-            fruit.x = Math.random() * 1000
+            fruit.x = Math.random() * 980
+            
             score++
             showPop = true
         } 
-        if(635 < fruit.y){
+        if(750 < fruit.y){
             fruit.y = 0
-            fruit.x = Math.random() * 1000
+            fruit.x = Math.random() * 980
             lives --
         }
 

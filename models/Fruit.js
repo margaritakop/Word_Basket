@@ -16,6 +16,9 @@ class Fruit {
         ellipse(this.x + 40, this.y, 80, 60);
         ellipse(this.x, this.y, 10);
         ellipse(this.x + 80, this.y, 10);
+        fill('#007EA7');
+        textSize(20)
+        text(fruit.word.word[0], this.x + 40, this.y + 10);
     }
 }
 
