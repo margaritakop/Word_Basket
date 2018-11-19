@@ -23,7 +23,7 @@ class MainScreen {
         this.heart(100, 30);
         this.heart(150, 30);
 
-        fruit.showFruit(400, 400)
+        fruit.showFruit()
 
         //Task 1
         //TODO refactor fruit x and to be attributes, like for basket

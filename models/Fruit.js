@@ -11,7 +11,7 @@ class Fruit {
         Words.splice(i, 1)
     }
 
-    showFruit(x, y) {
+    showFruit() {
         fill('#FCEC52');
         ellipse(this.x + 40, this.y, 80, 60);
         ellipse(this.x, this.y, 10);

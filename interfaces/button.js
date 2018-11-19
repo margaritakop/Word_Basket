@@ -30,19 +30,10 @@ class Button {
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
-                fruit = new Fruit()
+                fruit = new Fruit(400, 400)
                 fruit.pickword()
                 basket = new Basket();
                 displayedScreen = 'main';
-<<<<<<< HEAD
-                
-            }
-    }
-}
-=======
-
-                //Generate fruit objects to fall
-                //spawnFruit()
             }
     }
 
@@ -64,4 +55,3 @@ class Button {
             }
     }
 }
->>>>>>> master
