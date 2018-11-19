@@ -57,6 +57,7 @@ class MainScreen {
         } 
         if(635<fruit.y){
         lives--
+        //TODO fix that only one life decreases
         }
 
         //Task 3
