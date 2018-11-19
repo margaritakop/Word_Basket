@@ -52,15 +52,17 @@ class MainScreen {
             }
        
         if(635 < fruit.y 
-            && basket.x - 300 < fruit.x  
-            && fruit.x < basket.x + 300
+            && basket.x - 150 < fruit.x  
+            && fruit.x < basket.x + 150
             ){
             fruit.y = 0
+            fruit.x = Math.random() * 1000
             score++
             showPop = true
         } 
         if(635 < fruit.y){
             fruit.y = 0
+            fruit.x = Math.random() * 1000
             lives --
         }
 

@@ -106,6 +106,7 @@ class PopUp {
 
     resetPopUp() {
         fruit.pickWord();
+        fruit.x = Math.random() * 1000
         this.pickCorrect();
         popUp = new PopUp();
         showPop = false;
