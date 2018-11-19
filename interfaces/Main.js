@@ -1,11 +1,12 @@
 class MainScreen {
     constructor() {
-
+        
     }
-
+    
+    
     show() {
         background(bgCol);
-
+        
         fill(btnCol);
         for (let i = 20; i < screenWidth + 120; i += 90) {
             ellipse(i, 40, 120);
@@ -19,29 +20,40 @@ class MainScreen {
         basket.moveMouse();
         basket.show();
 
-        this.heart(50, 30);
-        this.heart(100, 30);
-        this.heart(150, 30);
+        
+            if(lives == 3){
+                this.heart(50, 30);
+                this.heart(100, 30);
+                this.heart(150, 30);
+            }
+            if(lives == 2){
+                this.heart(50, 30);
+                this.heart(100, 30);
+            }
+            if(lives == 1){
+                this.heart(50, 30);
+            }
+        
+      
 
         var speed = 5
         fruit.y = fruit.y + speed
         fruit.showFruit()
 
        
-        if(635<fruit.y 
-            && basket.x - 300 < fruit.x  
-            && fruit.x < basket.x + 300 
-            ){
+        if(635<fruit.y && basket.x - 300 < fruit.x  && fruit.x < basket.x + 300){
             score++
             fruit.x = Math.random()*1000
             fruit.y = 0
+        } 
+        if(635<fruit.y){
+        lives--
         }
-        
         //Task 1
         
         
-        //TODO check if basket and fruit collided
-        //if yes -> make new popup and shop popup
+        
+        //if yes ->  show popup
         //if not -> loose a life
         //display in random order
 
@@ -65,4 +77,5 @@ class MainScreen {
         fill(255);
         ellipse(x + 2, y - 3, 4);
     }
+    
 }
