@@ -1,6 +1,13 @@
 class PopUp {
     constructor() {
-        
+            let answers = []
+            answers.push(fruit.word.incorrectDef)
+            answers.push(fruit.word.correctDef)   
+            let i = Math.floor(Math.random()*2)
+            let textA = answers[i]
+            answers.splice(i, 1)
+            let textB = answers[0]
+            console.log(textA, textB)
     }
 
     show() {
@@ -52,13 +59,14 @@ class PopUp {
         textSize(60);
         text('B', 180, 390);
     }
+    
 
     textA() {
         fill('#007EA7');
         textAlign(LEFT);
         textSize(24);
         //the text shown will come from the word object  
-        text('A shorter individual', 260, 240);
+        text(textA, 260, 240);
     }
 
     textB() {
@@ -66,6 +74,6 @@ class PopUp {
         textAlign(LEFT);
         textSize(24);
         //the text shown will come from the word object
-        text('A lesser individual', 260, 380);
+        text(textB, 260, 380);
     }
 }

@@ -23,6 +23,7 @@ class MainScreen {
         this.heart(100, 30);
         this.heart(150, 30);
 
+        fruit.y = fruit.y + 1
         fruit.showFruit()
 
         //Task 1
