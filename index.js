@@ -104,3 +104,14 @@ function checkWordsReset() {
             incorrectDef: 'Some coding thing' }];
     }
 }
+
+var staticUrl = 'https://spreadsheets.google.com/feeds/list/1o9w4hMb1L05AyZjHSrQPZpdDQEQpY75Iaeoy9pQBzd4/od6/public/values?alt=json';
+$.getJSON(staticUrl, function(data) {
+          for (let i = 0; i < data.feed.entry.length; i++){
+              let word = data.feed.entry[i].title.$t
+              let correctDef = data.feed.entry[i].gsx$correctdefinition.$t
+              let incorrectDef = data.feed.entry[i].gsx$incorrectdefinition.$t
+              Words.push(new Word(word, correctDef, incorrectDef))
+          }
+    console.log('updated words: ', Words)
+});
