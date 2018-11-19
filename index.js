@@ -29,7 +29,7 @@ var popUp;
 
 var basket;
 var fruit;
-
+var lives = 3
 var displayedScreen = 'start';
 var showPop = false;
 

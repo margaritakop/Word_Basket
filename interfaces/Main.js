@@ -1,11 +1,12 @@
 class MainScreen {
     constructor() {
-
+        
     }
-
+    
+    
     show() {
         background(bgCol);
-
+        
         fill(btnCol);
         for (let x = 20; x < screenWidth + 120; x += 90) {
             ellipse(x, 60, 120);
@@ -29,24 +30,35 @@ class MainScreen {
         basket.moveMouse();
         basket.show();
 
-        this.heart(50, 30);
-        this.heart(100, 30);
-        this.heart(150, 30);
+        
+            if(lives == 3){
+                this.heart(50, 30);
+                this.heart(100, 30);
+                this.heart(150, 30);
+            }
+            if(lives == 2){
+                this.heart(50, 30);
+                this.heart(100, 30);
+            }
+            if(lives == 1){
+                this.heart(50, 30);
+            }
+        
+      
+        var speed = 5
+        fruit.y = fruit.y + speed
+        fruit.showFruit()
 
-        //Task 1
-        //TODO refactor fruit x and to be attributes, like for basket
-        //TODO decrease y of fruit to fall
-        //TODO check if basket and fruit collided
-        //if yes -> make new popup and shop popup
-        //if not -> loose a life
-        //display in random order
-
-
-        //Task 2
-        //updating scores one point one for correct answer
-        //on pupup click correct? is text == fruit.word.correctDef
-        //lose life if not caught
-        //if wrong answer -> add the word back to the Words
+       
+        if(635<fruit.y && basket.x - 300 < fruit.x  && fruit.x < basket.x + 300){
+            score++
+            fruit.x = Math.random()*1000
+            fruit.y = 0
+        } 
+        if(635<fruit.y){
+        lives--
+        //TODO fix that only one life decreases
+        }
 
         //Task 3
         //fruits without words?
@@ -65,4 +77,5 @@ class MainScreen {
         fill(255);
         ellipse(x + 2, y - 3, 4);
     }
+    
 }
