@@ -57,6 +57,7 @@ class PopUp {
         fill('#007EA7');
         textAlign(LEFT);
         textSize(24);
+        //the text shown will come from the word object  
         text('A shorter individual', 260, 240);
     }
 
@@ -64,6 +65,7 @@ class PopUp {
         fill('#007EA7');
         textAlign(LEFT);
         textSize(24);
+        //the text shown will come from the word object
         text('A lesser individual', 260, 380);
     }
 }

@@ -1,19 +1,22 @@
 class Fruit {
-    constructor() {
-        this.word = '' //if empty string, fruit is not worded
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
     }
+    
     pickword(words){
         this.word = 'randomly selected word'
         //dont display again if it has already been, poop from list globally at this point
         //words.remove('selected word')
         return words
+
     }
 
-    showLemon(x, y) {
+    showLemon() {
         fill('#FCEC52');
-        ellipse(x + 40, y, 80, 60);
-        ellipse(x, y, 10);
-        ellipse(x + 80, y, 10);
+        ellipse(this.x + 40, this.y, 80, 60);
+        ellipse(this.x, this.y, 10);
+        ellipse(this.x + 80, this.y, 10);
     }
 }
 
