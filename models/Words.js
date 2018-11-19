@@ -34,5 +34,3 @@ let Words = [{
     word: 'Test',
     correctDef: 'An exam',
     incorrectDef: 'Some coding thing' } ]
-
-module.exports = Words
