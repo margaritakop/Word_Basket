@@ -24,17 +24,23 @@ class MainScreen {
         this.heart(150, 30);
 
         fruit.showFruit(400, 400)
+
+        //Task 1
         //TODO refactor fruit x and to be attributes, like for basket
         //TODO decrease y of fruit to fall
-
         //TODO check if basket and fruit collided
         //if yes -> make new popup and shop popup
-
-        //updating scores one point for catch, one for correct answer
-        //on pupup click correct? 
+        //if not -> loose a life
         //display in random order
-        //lose life if not caught
 
+
+        //Task 2
+        //updating scores one point one for correct answer
+        //on pupup click correct? is text == fruit.word.correctDef
+        //lose life if not caught
+        //if wrong answer -> add the word back to the Words
+
+        //Task 3
         //fruits without words?
     }
     
