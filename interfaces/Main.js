@@ -27,9 +27,19 @@ class MainScreen {
         fruit.y = fruit.y + speed
         fruit.showFruit()
 
+       
+        if(635<fruit.y 
+            && basket.x - 300 < fruit.x  
+            && fruit.x < basket.x + 300 
+            ){
+            score++
+            fruit.x = Math.random()*1000
+            fruit.y = 0
+        }
+        
         //Task 1
-        //TODO refactor fruit x and to be attributes, like for basket
-        //TODO decrease y of fruit to fall
+        
+        
         //TODO check if basket and fruit collided
         //if yes -> make new popup and shop popup
         //if not -> loose a life
