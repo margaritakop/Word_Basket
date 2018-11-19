@@ -4,12 +4,12 @@ class StartScreen {
     }
 
     show() {
-        background('#EEF5DB');
+        background(bgCol);
     
         noStroke();
-        fill('#FFBA49');
+        fill(255);
         textAlign(CENTER);
-        textFont('Gill Sans', 140)
+        textFont('Gill Sans', 140);
         text('Word Basket', screenWidth/2, screenHeight/4);
 
         playButton.show();
