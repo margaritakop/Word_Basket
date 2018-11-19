@@ -27,6 +27,7 @@ var instructionsButton = new Button('Instructions', screenWidth/2 - 100, screenH
 var insBackButton = new Button('Back', screenWidth/2 - 100, screenHeight*(7/9));
 
 var basket;
+var fruit;
 
 var displayedScreen = 'start';
 var showPop = false;
