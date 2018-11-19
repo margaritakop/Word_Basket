@@ -1,9 +1,15 @@
 //require will be used for testing, the files are called in the script tag of index.html
 
-// var Fruit = require('./models/Fruit');
-// var Words = require('./models/Words')
-// var Word = require('./models/Word')
-//console.log(Words)
+var Button = require('./interfaces/Button.js');
+var StartScreen = require('./interfaces/Start.js')
+var Instructions = require('./interfaces/Instructions.js')
+var MainScreen = require("./interfaces/Main.js")
+var PopUp = require("./models/PopUp.js")
+var Basket = require("./models/Basket.js")
+var Fruit = require("./models/Fruit.js")
+var Words = require("./models/Words.js")
+
+var https = require('https')
 
 var screenHeight = 800;
 var screenWidth = 1000;
@@ -103,4 +109,36 @@ function checkWordsReset() {
             correctDef: 'A procedure to establish quality',
             incorrectDef: 'Some coding thing' }];
     }
+}
+
+let url = 'https://spreadsheets.google.com/feeds/list/1o9w4hMb1L05AyZjHSrQPZpdDQEQpY75Iaeoy9pQBzd4/od6/public/values?alt=json'
+function loadWordsFromOnlineSpreadsheet(url){
+    console.log('loading words from ', url)
+    let words = []
+
+    https.get(url, (resp) => {
+        let data = '';
+      
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+          data += chunk;
+        });
+      
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+          spreadsheet = (JSON.parse(data))
+      
+          for (let i = 0; i < spreadsheet.feed.entry.length; i++){
+              word = spreadsheet.feed.entry[i].title.$t
+              correctDef = spreadsheet.feed.entry[i].gsx$correctdefinition.$t
+              incorrectDef = spreadsheet.feed.entry[i].gsx$incorrectdefinition.$t
+              words.push(new Word(word, correctDef, incorrectDef))
+          }
+          console.log(words)
+          Words = words
+        })
+      
+      }).on("error", (err) => {
+        console.log("Error: " + err.message)
+      });
 }

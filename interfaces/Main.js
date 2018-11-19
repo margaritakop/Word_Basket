@@ -80,3 +80,5 @@ class MainScreen {
     }
     
 }
+
+module.exports = MainScreen

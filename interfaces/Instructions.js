@@ -27,3 +27,5 @@ class Instructions {
         insBackButton.show();
     }
 }
+
+module.exports = Instructions

@@ -24,3 +24,5 @@ class StartScreen {
         instructionsButton.show();
     }
 }
+
+module.exports = StartScreen
