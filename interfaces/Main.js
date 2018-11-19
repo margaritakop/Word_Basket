@@ -43,29 +43,30 @@ class MainScreen {
             if(lives == 1){
                 this.heart(50, 30);
             }
-        
-      
-        var speed = 5
-        fruit.y = fruit.y + speed
-        fruit.showFruit()
-
+        var fruitSpeed = 7
+        if (showPop != true){
+            fruit.y = fruit.y + fruitSpeed
+            fruit.showFruit()
+            }
        
-        if(635<fruit.y && basket.x - 300 < fruit.x  && fruit.x < basket.x + 300){
-            score++
-            fruit.x = Math.random()*1000
+        if(635 < fruit.y 
+            && basket.x - 150 < fruit.x  
+            && fruit.x < basket.x + 150
+            ){
             fruit.y = 0
+            fruit.x = Math.random() * 980
+            
+            score++
+            showPop = true
         } 
-        if(635<fruit.y){
-        lives--
-        //TODO fix that only one life decreases
+        if(750 < fruit.y){
+            fruit.y = 0
+            fruit.x = Math.random() * 980
+            lives --
         }
 
         //Task 3
         //fruits without words?
-
-        if (keyIsDown(UP_ARROW)) {
-            showPop = true;
-        }
     }
     
     heart(x, y) {
