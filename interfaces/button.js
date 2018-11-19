@@ -16,10 +16,10 @@ class Button {
             } else {
                 fill(btnCol);
             }
-        rect(this.x, this.y, 200, 100);
+        rect(this.x, this.y, 200, 100, 10);
 
         noStroke();
-        fill('#007EA7');
+        fill(drkTxtCol);
         textAlign(CENTER);
         textFont('Gill Sans', 32);
         text(this.content, this.x + 100, this.y + 58);
@@ -32,9 +32,27 @@ class Button {
             mouseY < this.y + 100) {
                 basket = new Basket();
                 displayedScreen = 'main';
-                
+
                 //Generate fruit objects to fall
                 //spawnFruit()
+            }
+    }
+
+    insClicked() {
+        if (mouseX > this.x &&
+            mouseX < this.x + 200 &&
+            mouseY > this.y &&
+            mouseY < this.y + 100) {
+                displayedScreen = 'instructions';
+            }
+    }
+
+    backClicked() {
+        if (mouseX > this.x &&
+            mouseX < this.x + 200 &&
+            mouseY > this.y &&
+            mouseY < this.y + 100) {
+                displayedScreen = 'start';
             }
     }
 }
