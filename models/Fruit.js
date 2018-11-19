@@ -4,7 +4,7 @@ class Fruit {
         this.y = y;
     }
     
-    pickword(words){
+    pickWord(){
         let i = Math.floor(Math.random()*Words.length)
         this.word = Words[i]
         //remove the word from the Words array

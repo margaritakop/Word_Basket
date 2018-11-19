@@ -5,7 +5,7 @@ let Words = [{
     {
     word: 'Race',
     correctDef: 'Group of people which share different physical characteristics',
-    incorrectDef: 'Poeple from different places' },
+    incorrectDef: 'People from different places' },
     {
     word: 'Religion',
     correctDef: 'The beliefs of a person',
@@ -28,9 +28,9 @@ let Words = [{
     incorrectDef: 'The countries a person has visited' },
     {
     word: 'Age',
-    correctDef: 'The length of time a person is living for',
+    correctDef: 'The number of years someone has been alive',
     incorrectDef: 'The place of birth' },
     {
     word: 'Test',
-    correctDef: 'An exam',
-    incorrectDef: 'Some coding thing' } ]
+    correctDef: 'A procedure to establish quality',
+    incorrectDef: 'Some coding thing' }];

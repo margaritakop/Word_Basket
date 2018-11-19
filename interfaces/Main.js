@@ -7,8 +7,18 @@ class MainScreen {
         background(bgCol);
 
         fill(btnCol);
-        for (let i = 20; i < screenWidth + 120; i += 90) {
-            ellipse(i, 40, 120);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, 60, 120);
+        }
+
+        fill(255);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, 20, 120);
+        }
+
+        fill(btnCol);
+        for (let x = 20; x < screenWidth + 120; x += 90) {
+            ellipse(x, -20, 120);
         }
 
         fill('#4E6E58');
@@ -22,8 +32,6 @@ class MainScreen {
         this.heart(50, 30);
         this.heart(100, 30);
         this.heart(150, 30);
-
-        fruit.showFruit()
 
         //Task 1
         //TODO refactor fruit x and to be attributes, like for basket
@@ -42,6 +50,10 @@ class MainScreen {
 
         //Task 3
         //fruits without words?
+
+        if (keyIsDown(UP_ARROW)) {
+            showPop = true;
+        }
     }
     
     heart(x, y) {
