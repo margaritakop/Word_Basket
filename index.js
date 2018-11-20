@@ -42,6 +42,18 @@ var wrong = new Audio('./sounds/wrong.mp3');
 var splat = new Audio('./sounds/splat.mp3');
 var thud = new Audio('./sounds/thud.mp3')
 
+var melon = new Fruit(screenWidth/2 - 5, screenHeight - 50 - 55);
+var melon2 = new Fruit(screenWidth/2 - 110 - 5, screenHeight - 50 - 70);
+var apple = new Fruit(screenWidth/2 + 20 - 5, screenHeight - 50 - 50);
+var pear = new Fruit(screenWidth/2 - 30 - 5, screenHeight - 50 - 45);
+var coconut = new Fruit(screenWidth/2 - 80 - 5, screenHeight - 50 - 50);
+var blueberries = new Fruit(screenWidth/2 + 60 - 5, screenHeight - 50 - 35);
+var blueberries2 = new Fruit(screenWidth/2 - 70 - 5, screenHeight - 50 - 35);
+var blueberries3 = new Fruit(screenWidth/2 - 120 - 5, screenHeight - 50 - 40);
+var blueberries4 = new Fruit(screenWidth/2 + 165 - 5, screenHeight - 50 - 45);
+var avocado = new Fruit(screenWidth/2 + 100 - 5, screenHeight - 50 - 50);
+var orange = new Fruit(screenWidth/2 + 140 - 5, screenHeight - 50 - 50);
+
 function setup() {
     createCanvas(screenWidth, screenHeight);
 }

@@ -97,6 +97,7 @@ class PopUp {
             score++;
             ding.play();
         } else {
+            lives--;
             wrong.play();
         }
     }
@@ -106,6 +107,7 @@ class PopUp {
             score++;
             ding.play();
         } else {
+            lives--;
             wrong.play();
         }
     }

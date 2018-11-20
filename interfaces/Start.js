@@ -22,5 +22,20 @@ class StartScreen {
 
         playButton.show();
         instructionsButton.show();
+
+        fill('#5ABCB9');
+        ellipse(screenWidth/2 + 15, screenHeight - 70, 400, 50);
+
+        blueberries4.showBlueberries();
+        melon2.showWatermelon();
+        apple.showApple();
+        pear.showPear();
+        blueberries3.showBlueberries();
+        coconut.showCoconut();
+        orange.showOrange();
+        avocado.showAvocado();
+        blueberries.showBlueberries();
+        blueberries2.showBlueberries();
+        melon.showWatermelon();
     }
 }

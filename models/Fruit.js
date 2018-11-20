@@ -9,7 +9,7 @@ class Fruit {
     pickWord() {
         let i = Math.floor(Math.random()*Words.length)
         //add a chance factor if chosen word is actually assigned
-        if (Math.random() > 0.8){
+        if (Math.random() > 0.875){
             this.word = Words[i]
             //remove the word from the Words array
             Words.splice(i, 1)
