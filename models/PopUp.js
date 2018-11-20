@@ -95,12 +95,18 @@ class PopUp {
     checkAnswerA() {
         if (this.aText == fruit.word.correctDef) {
             score++;
+            ding.play();
+        } else {
+            wrong.play();
         }
     }
 
     checkAnswerB() {
         if (this.bText == fruit.word.correctDef) {
             score++;
+            ding.play();
+        } else {
+            wrong.play();
         }
     }
 

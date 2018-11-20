@@ -30,11 +30,14 @@ class Button {
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
+                lives = 3;
+                score = 0;
+                mainScreen = new MainScreen();
+                displayedScreen = 'main';
                 fruit = new Fruit(400, 400)
                 fruit.pickWord()
-                basket = new Basket();
-                displayedScreen = 'main';
                 popUp = new PopUp();
+                basket = new Basket();
             }
     }
 
@@ -52,6 +55,8 @@ class Button {
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
+                endScreen = undefined;
+                startScreen = new StartScreen();
                 displayedScreen = 'start';
             }
     }
