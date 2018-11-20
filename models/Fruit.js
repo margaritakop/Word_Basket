@@ -9,7 +9,7 @@ class Fruit {
     pickWord() {
         let i = Math.floor(Math.random()*Words.length)
         //add a chance factor if chosen word is actually assigned
-        if (Math.random() > 0.75){
+        if (Math.random() > 0.8){
             this.word = Words[i]
             //remove the word from the Words array
             Words.splice(i, 1)
@@ -66,8 +66,44 @@ class Fruit {
         ellipse(this.x, this.y, 50);
     }
 
+    showOrange() {
+        fill('#F1A208');
+        ellipse(this.x, this.y, 80);
+        fill('#F8F4A6');
+        ellipse(this.x, this.y, 72);
+        fill('#F1A208');
+        ellipse(this.x, this.y, 65);
+        fill('#F8F4A6');
+        ellipse(this.x, this.y, 15);
+        fill(255);
+        ellipse(this.x, this.y, 10);
+        ellipse(this.x, this.y - 20, 2, 4);
+        ellipse(this.x, this.y + 20, 2, 4);
+        ellipse(this.x + 20, this.y, 4, 2);
+        ellipse(this.x - 20, this.y, 4, 2);
+    }
+    
+    showAvocado() {
+        fill(50);
+        ellipse(this.x, this.y, 65, 82);
+        fill('#8CC084');
+        ellipse(this.x, this.y, 60, 75);
+        fill('#C1D7AE');
+        ellipse(this.x, this.y, 50, 65);
+        fill('#ECDCB0');
+        ellipse(this.x, this.y, 40, 55);
+        fill(80);
+        ellipse(this.x, this.y + 10, 28);
+        fill('#806443');
+        ellipse(this.x, this.y + 10, 25);
+        fill(220);
+        ellipse(this.x + 5, this.y + 5, 10);
+        fill(255);
+        ellipse(this.x + 5, this.y + 5, 6);
+    }
+
     pickFruit() {
-        var temp = Math.floor(Math.random() * 4);
+        var temp = Math.floor(Math.random() * 6);
 
         if (temp == 1) {
             this.fruitType = 'watermelon'
@@ -75,6 +111,10 @@ class Fruit {
             this.fruitType = 'pear';
         } else if (temp == 3) {
             this.fruitType = 'coconut';
+        } else if (temp == 4) {
+            this.fruitType = 'orange';
+        } else if (temp == 5) {
+            this.fruitType = 'avocado';
         }
     }
 }
