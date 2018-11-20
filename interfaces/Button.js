@@ -30,6 +30,7 @@ class Button {
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
+                fruitSpeed = 5;
                 lives = 3;
                 score = 0;
                 mainScreen = new MainScreen();
