@@ -62,7 +62,14 @@ class MainScreen {
             fruit.y = 0
             fruit.x = Math.random() * 980
             score++
-            showPop = true
+            if (fruit.word == '') {
+                showPop = false;
+                fruit.pickWord();
+                //when picking word, create new popup object
+                popUp = new PopUp();
+            } else {
+                showPop = true;
+            }
         } 
         if(750 < fruit.y){
             fruit.y = 0
@@ -70,9 +77,6 @@ class MainScreen {
             splat.play();
             lives --
         }
-
-        //Task 3
-        //fruits without words?
     }
     
     heart(x, y) {
