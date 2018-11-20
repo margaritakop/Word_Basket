@@ -112,11 +112,11 @@ class PopUp {
 
     resetPopUp() {
         fruit.pickWord();
-        fruit.x = Math.random() * 1000
+        fruit.pickFruit();
+        fruit.location();
         this.pickCorrect();
         popUp = new PopUp();
         showPop = false;
-        checkWordsReset();
     }
 
     pickCorrect() {

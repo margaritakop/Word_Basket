@@ -49,22 +49,36 @@ class MainScreen {
                 displayedScreen = 'end';
             }
 
-        var fruitSpeed = 7
         if (showPop != true){
-            fruit.y = fruit.y + fruitSpeed
-            fruit.showFruit()
+            if (fruit.word == '') {
+                fruit.y = fruit.y + fruitSpeed
+
+                if (fruit.fruitType == 'watermelon') {
+                    fruit.showWatermelon();
+                } else if (fruit.fruitType == 'pear') {
+                    fruit.showPear();
+                } else if (fruit.fruitType == 'coconut') {
+                    fruit.showCoconut();
+                }
+
+            } else {
+                fruit.y = fruit.y + fruitSpeed
+                fruit.showLemon();
             }
-       
+            }
+        
         if(635 < fruit.y 
             && basket.x - 150 < fruit.x  
             && fruit.x < basket.x + 150
             ){
-            fruit.y = 0
-            fruit.x = Math.random() * 980
+            checkWordsReset()
+            fruitSpeed = 5 + (score / 6);
+            fruit.location();
             score++
             if (fruit.word == '') {
                 showPop = false;
                 fruit.pickWord();
+                fruit.pickFruit();
                 //when picking word, create new popup object
                 popUp = new PopUp();
             } else {
@@ -72,8 +86,8 @@ class MainScreen {
             }
         } 
         if(750 < fruit.y){
-            fruit.y = 0
-            fruit.x = Math.random() * 980
+            checkWordsReset();
+            fruit.location();
             splat.play();
             lives --
         }
@@ -88,5 +102,4 @@ class MainScreen {
         fill(255);
         ellipse(x + 2, y - 3, 4);
     }
-    
 }
