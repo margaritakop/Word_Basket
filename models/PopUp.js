@@ -7,7 +7,7 @@ class PopUp {
         fill(255);
         stroke(strkCol);
         strokeWeight(10);
-        rect(screenWidth / 2 - 150, 420, 300, 100, 20);
+        rect(screenWidth / 2 - 150, 90, 300, 100, 20);
 
         fill('#EDE5A6');
         stroke(strkCol);
@@ -22,7 +22,7 @@ class PopUp {
 
         textAlign(CENTER);
         textSize(32);
-        text(fruit.word.word, screenWidth/2, 495);
+        text(fruit.word.word, screenWidth/2, 132);
 
         //stops the rest of the game having the stroke properties
         noStroke();

@@ -67,9 +67,9 @@ class MainScreen {
             }
             }
         
-        if(635 < fruit.y 
-            && basket.x - 150 < fruit.x  
-            && fruit.x < basket.x + 150
+        if(620 < fruit.y 
+            && basket.x - 120 < fruit.x  
+            && fruit.x < basket.x + 120
             ){
             checkWordsReset()
             fruitSpeed = 5 + (score / 6);

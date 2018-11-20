@@ -22,7 +22,7 @@ class Button {
         fill(drkTxtCol);
         textAlign(CENTER);
         textFont('Gill Sans', 32);
-        text(this.content, this.x + 100, this.y + 58);
+        text(this.content, this.x + 100, this.y + 59);
     }
 
     playClicked() {
@@ -30,12 +30,13 @@ class Button {
             mouseX < this.x + 200 &&
             mouseY > this.y &&
             mouseY < this.y + 100) {
+                ping.play();
                 fruitSpeed = 5;
                 lives = 3;
                 score = 0;
                 mainScreen = new MainScreen();
                 displayedScreen = 'main';
-                fruit = new Fruit(400, 400)
+                fruit = new Fruit(400, 0)
                 fruit.pickWord()
                 popUp = new PopUp();
                 basket = new Basket();
