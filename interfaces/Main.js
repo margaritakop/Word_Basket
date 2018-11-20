@@ -3,7 +3,6 @@ class MainScreen {
         
     }
     
-    
     show() {
         background(bgCol);
         
@@ -31,18 +30,25 @@ class MainScreen {
         basket.show();
 
         
-            if(lives == 3){
+            if (lives == 3) {
                 this.heart(50, 30);
                 this.heart(100, 30);
                 this.heart(150, 30);
             }
-            if(lives == 2){
+            if (lives == 2) {
                 this.heart(50, 30);
                 this.heart(100, 30);
             }
-            if(lives == 1){
+            if (lives == 1) {
                 this.heart(50, 30);
             }
+            if (lives == 0) {
+                checkHighScore();
+                startScreen = undefined;
+                endScreen = new EndScreen();
+                displayedScreen = 'end';
+            }
+
         var fruitSpeed = 7
         if (showPop != true){
             fruit.y = fruit.y + fruitSpeed
@@ -55,13 +61,13 @@ class MainScreen {
             ){
             fruit.y = 0
             fruit.x = Math.random() * 980
-            
             score++
             showPop = true
         } 
         if(750 < fruit.y){
             fruit.y = 0
             fruit.x = Math.random() * 980
+            splat.play();
             lives --
         }
 
