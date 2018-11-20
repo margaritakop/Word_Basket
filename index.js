@@ -32,7 +32,7 @@ var homeButton = new Button('Home', screenWidth/2 - 100, screenHeight/1.6);
 var basket;
 var fruit;
 var lives = 3;
-var fruitSpeed = 6;
+var fruitSpeed;
 var displayedScreen = 'start';
 var showPop = false;
 

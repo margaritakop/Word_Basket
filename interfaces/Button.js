@@ -31,7 +31,7 @@ class Button {
             mouseY > this.y &&
             mouseY < this.y + 100) {
                 ping.play();
-                fruitSpeed = 5;
+                fruitSpeed = 8;
                 lives = 3;
                 score = 0;
                 mainScreen = new MainScreen();
