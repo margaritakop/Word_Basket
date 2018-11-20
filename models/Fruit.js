@@ -102,8 +102,53 @@ class Fruit {
         ellipse(this.x + 5, this.y + 5, 6);
     }
 
+    showApple() {
+        fill('#946846');
+        rect(this.x + 10, this.y - 45, 4, 16);
+        fill('#A33B20');
+        ellipse(this.x, this.y, 54, 74);
+        ellipse(this.x + 25, this.y, 54, 74);
+        fill('#F8FFE5');
+        ellipse(this.x, this.y, 50, 70);
+        ellipse(this.x + 25, this.y, 50, 70);
+        fill('#F3FFC6');
+        ellipse(this.x + 12, this.y, 35, 50);
+        fill(80);
+        ellipse(this.x + 5, this.y, 5, 10);
+        ellipse(this.x + 20, this.y, 5, 10);
+    }
+
+    showBlueberries() {
+        fill('#2F2963');
+        ellipse(this.x, this.y, 30);
+        fill('#454372');
+        ellipse(this.x, this.y - 8, 15, 10);
+        fill(25);
+        ellipse(this.x, this.y - 10, 8);
+        fill(225)
+        ellipse(this.x, this.y - 10, 2);
+        
+        fill('#2F2963');
+        ellipse(this.x + 20, this.y, 30);
+        fill('#454372');
+        ellipse(this.x + 20, this.y - 8, 15, 10);
+        fill(25);
+        ellipse(this.x + 20, this.y - 10, 8);
+        fill(225)
+        ellipse(this.x + 20, this.y - 10, 2);
+
+        fill('#2F2963');
+        ellipse(this.x + 10, this.y + 10, 30);
+        fill('#454372');
+        ellipse(this.x + 10, this.y + 2, 15, 10);
+        fill(25);
+        ellipse(this.x + 10, this.y, 8);
+        fill(225)
+        ellipse(this.x + 10, this.y, 2);
+    }
+
     pickFruit() {
-        var temp = Math.floor(Math.random() * 6);
+        var temp = Math.floor(Math.random() * 8);
 
         if (temp == 1) {
             this.fruitType = 'watermelon'
@@ -115,6 +160,10 @@ class Fruit {
             this.fruitType = 'orange';
         } else if (temp == 5) {
             this.fruitType = 'avocado';
+        } else if (temp == 6) {
+            this.fruitType = 'apple';
+        } else if (temp == 7) {
+            this.fruitType = 'blueberries';
         }
     }
 }

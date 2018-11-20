@@ -63,6 +63,10 @@ class MainScreen {
                     fruit.showOrange();
                 } else if (fruit.fruitType == 'avocado') {
                     fruit.showAvocado();
+                } else if (fruit.fruitType == 'apple') {
+                    fruit.showApple();
+                } else if (fruit.fruitType == 'blueberries') {
+                    fruit.showBlueberries();
                 }
 
             } else {
