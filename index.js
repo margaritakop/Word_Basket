@@ -39,6 +39,7 @@ var showPop = false;
 var ding = new Audio('./sounds/ding.mp3');
 var wrong = new Audio('./sounds/wrong.mp3');
 var splat = new Audio('./sounds/splat.mp3');
+var thud = new Audio('./sounds/thud.mp3')
 
 function setup() {
     createCanvas(screenWidth, screenHeight);

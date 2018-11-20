@@ -74,6 +74,7 @@ class MainScreen {
             checkWordsReset()
             fruitSpeed = 5 + (score / 6);
             fruit.location();
+            thud.play();
             score++
             if (fruit.word == '') {
                 showPop = false;
