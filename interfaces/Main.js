@@ -80,7 +80,7 @@ class MainScreen {
             && fruit.x < basket.x + 120
             ){
             checkWordsReset()
-            fruitSpeed = 5 + (score / 6);
+            fruitSpeed = 10 + (score / 6);
             fruit.location();
             thud.play();
             score++
